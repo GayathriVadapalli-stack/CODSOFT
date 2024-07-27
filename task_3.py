@@ -18,10 +18,14 @@ def generate_password():                           # defining password generator
     #Generating hard or easy password according to the user's choice
     if type_of_password == 'hard':
         random.shuffle(password_1)
+        password = ''.join(password_1)  #joining the password into a string
+        print(f'Your password is {password}')     #printing the generated password
+    elif type_of_password == 'easy':
+        password = ''.join(password_1)  #joining the password into a string
+        print(f'Your password is {password}')     #printing the generated password
+    else:
+        print("Invalid Input.Try again!!")
     
-    password = ''.join(password_1)  #joining the password into a string
-    
-    print(f'Your password is {password}')     #printing the generated password
     print("THANK YOU")
 
 generate_password()
